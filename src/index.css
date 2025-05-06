@@ -66,7 +66,7 @@
 
 @layer components {
   .text-gradient {
-    @apply bg-gradient-to-r from-chat-blue via-blue-400 to-purple-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-chat-blue via-blue-400 to-blue-600 bg-clip-text text-transparent;
   }
   
   .bg-gradient-blue {
@@ -117,13 +117,61 @@
   }
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-5px) translateY(-5px);
+  }
+  50% {
+    transform: translateX(0) translateY(-10px);
+  }
+  75% {
+    transform: translateX(5px) translateY(-5px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(44, 116, 224, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(44, 116, 224, 0.8));
+  }
+}
+
 @layer utilities {
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
   
+  .animate-bounce-slow {
+    animation: bounce 3s ease-in-out infinite;
+  }
+  
+  .animate-wave {
+    animation: wave 8s ease-in-out infinite;
+  }
+  
   .animate-glow {
     animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
   }
   
   .animate-pulse-subtle {
@@ -131,7 +179,7 @@
   }
   
   .animate-shimmer {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(44, 116, 224, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
     background-size: 200% 100%;
     animation: shimmer 3s infinite;
   }
