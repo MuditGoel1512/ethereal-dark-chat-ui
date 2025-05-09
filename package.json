@@ -2,6 +2,8 @@
   "name": "vite_react_shadcn_ts",
   "private": true,
   "homepage": "https://muditgoel1512.github.io/ethereal-dark-chat-ui",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
