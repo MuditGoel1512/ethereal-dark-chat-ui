@@ -15,7 +15,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename="/ethereal-dark-chat-ui">
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
